@@ -126,8 +126,8 @@ class FunctionNotDefined(InvalidExpression):
     """sorry! That function isn't defined!"""
 
     def __init__(self, func_name, expression):
-        self.message = "Function '{0}' not defined," " for expression '{1}'.".format(
-            func_name, expression
+        self.message = "Function '{0}' not defined".format(
+            func_name
         )
         setattr(self, "func_name", func_name)  # bypass 2to3 confusion.
         self.expression = expression
@@ -140,7 +140,7 @@ class NameNotDefined(InvalidExpression):
 
     def __init__(self, name, expression):
         self.name = name
-        self.message = "'{0}' is not defined for expression '{1}'".format(name, expression)
+        self.message = "'{0}' is not defined".format(name)
         self.expression = expression
 
         super(InvalidExpression, self).__init__(self.message)
@@ -150,8 +150,8 @@ class AttributeDoesNotExist(InvalidExpression):
     """attribute does not exist"""
 
     def __init__(self, attr, expression):
-        self.message = "Attribute '{0}' does not exist in expression '{1}'".format(
-            attr, expression
+        self.message = "Attribute '{0}' does not exist".format(
+            attr
         )
         self.attr = attr
         self.expression = expression
