@@ -11,4 +11,4 @@ class Primsatic:
 
 
 p = Primsatic(parser)
-print(p.evaluate_expression("round(5.5)"))
+print(p.evaluate_expression("6 + 6"))
