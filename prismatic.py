@@ -1,7 +1,6 @@
 from calculator import Calculator
 import curses
 from curses import wrapper
-from curses.textpad import Textbox
 
 calc = Calculator()
 
